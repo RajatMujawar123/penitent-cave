@@ -1,12 +1,11 @@
 import {
     Box,
-    Divider,
+    Image,
     Flex,
     HStack,
     Input,
     Text,
-    Tooltip,
-    Search2Icon
+    Tooltip
   } from "@chakra-ui/react";
   import { Spacer } from "@chakra-ui/react";
   import React from "react";
@@ -92,26 +91,29 @@ import {
           </Box>
         </Flex>
   
-        <Flex alignitem="center" py={2} px={12} border="solid teal 1px">
-          <Box p={2}>
-            <HStack spacing={8}>
-              <Text gap="10px">Women</Text>
-              <Text gap="10px">Women</Text>
-              <Text gap="10px">Men</Text>
+        <Box height="70px">
+        <Flex alignContent="center" alignitem="center" p={1} justifyContent="space-evenly"  border="solid teal 1px" height="70px">
+          <Box fontWeight={500} fontSize="15px" width="500px" p={1} >
+            <HStack spacing={2}>
+            
+              <Image width="35%" height="50px" src="https://blog.lifestylestores.com/wp-content/uploads/2021/02/Lifestyle-Logo-640x245-1.webp" alt="err"/>
+            
+              <Text >Women</Text>
+              <Text >Men</Text>
               <Text>Kids</Text>
               <Text>Shoes & Bags</Text>
               <Text>Beauty</Text>
             </HStack>
           </Box>
   
-          <Box p={1}>
-            <HStack spacing={8}>
+          <Box p={1}  display="grid" lignContent="center" alignitem="center" >
+            <HStack spacing={2}>
               <Input width="400px" placeholder="What are you looking for?" />
             </HStack>
           </Box>
-  
-          <Box p={2}>
-            <HStack marginLeft="5px" spacing={5}>
+          <Flex lignContent="center" alignitem="center">
+          <Box p={2} fontWeight={500} fontSize="15px" display="grid" lignContent="center" alignitem="center" >
+            <HStack marginLeft="6px" spacing={2}>
               <Text>More</Text>
               <Box>|</Box>
               <Text>sign Up/sign In</Text>
@@ -119,7 +121,9 @@ import {
               <Text>Beauty</Text>
             </HStack>
           </Box>
+          </Flex>
         </Flex>
+        </Box>
         <Box
           display="flex"
           justifyContent="center"

@@ -1,5 +1,5 @@
 import React from  "react";
-import { Image,Box, Divider, Flex, Center } from '@chakra-ui/react'
+import { Image,Box, Divider, Center } from '@chakra-ui/react'
 
 function SingleImage({image}){
     return(

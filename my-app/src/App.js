@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from "./Components/Navbar";
 import SingleImage from "./Components/SingleImage"
@@ -8,8 +8,8 @@ import BigBrands from "./Components/BigBrands"
 import ShopByCategory from "./Components/ShopByCategory"
 import TopTrendingBrands from "./Components/TopTrendingBrands"
 import TopPicks from "./Components/TopPicks"
-
-
+import Slideshow from "./Components/SlideShow"
+import Footer from './Components/Footer';
 
 
 
@@ -17,8 +17,9 @@ import TopPicks from "./Components/TopPicks"
 
 function App() {
   return (
-    <div style={{height:"5000px"}} className="App">
+    <div style={{height:"15000px"}} className="App">
      <Navbar />
+     <Slideshow />
      <SingleImage image="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-12modblock-oneBythree-A-Men-09Nov2022.gif" />
      <MultipleImage />
      <WinterWear /> 
@@ -65,6 +66,8 @@ function App() {
   image1='https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Men-15modularblock-2-oneBythree-16Sep2022.jpg'
   image2='https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Men-15modularblock-3-oneBythree-16Sep2022.jpg'
       />
+
+      <Footer />
     </div>
   );
 }
