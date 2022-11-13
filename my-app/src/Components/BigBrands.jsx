@@ -1,5 +1,5 @@
 import {Box,Center,Grid, Stack,Image,Divider} from "@chakra-ui/react" 
-
+import {Link} from "react-router-dom"
 
 function BigBrands (){
     return(
@@ -22,12 +22,13 @@ function BigBrands (){
   <p style={{fontWeight:"bold", paddingTop:"8px"}}>Upto 40% Off</p>
  </Box>
  <Box cursor="pointer">
-  <Image
+  <Link to="newarrivals"><Image
    
     objectFit='cover'
     src='https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC5-Banner2-men-Desktop-02Sep2022.jpg'
     alt='Dan Abramov'
   />
+  </Link>
     <p style={{fontWeight:"bold", paddingTop:"8px"}}>Upto 70% Off</p>
   </Box>
   

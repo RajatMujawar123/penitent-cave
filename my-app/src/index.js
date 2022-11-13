@@ -6,13 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import CartContextProvider from './Components/cartprovider';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <ChakraProvider>
     <CartContextProvider>   
+    <Auth0Provider
+    domain="dev-aau6hpjmajw23x3y.us.auth0.com"
+    clientId="FS2unDsqyLK46sIsO91VJ8UGuPPngXIm"
+    redirectUri={window.location.origin}
+  >
     <App />
+    </Auth0Provider>
     </CartContextProvider>
   </ChakraProvider>
 </BrowserRouter>

@@ -27,7 +27,8 @@ const slideImages = [
 
 const Slideshow = () => {
     return (
-      <div className="slide-container"  style={{backgroundColor:"lightgrey",marginTop:"40px",width:"90%",margin:"auto"}}>
+      <div style={{marginTop:"50px"}}>
+      <div  style={{backgroundColor:"lightgrey",marginTop:"50px",width:"90%",margin:"auto"}}>
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <div 
@@ -42,6 +43,7 @@ const Slideshow = () => {
             </div>
           ))} 
         </Slide>
+      </div>
       </div>
     )
 }

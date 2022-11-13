@@ -123,15 +123,6 @@ function Footer (){
     <Divider orientation='horizontal' p={8} width="87%"  color="black"/>
     </Center>
 
-    <Grid templateColumns='repeat(5, 1fr)' width="90%" margin="auto" border="solid red 1px" marginTop="50px" gap={6}>
-  <Box >
-  
-    </Box>
-  <Box  h='10' bg='blue.500' />
-  <Box  h='10' bg='blue.500' />
-  <Box  h='10' bg='blue.500' />
-  <Box  h='10' bg='blue.500' />
-</Grid>
    
         </>
     )

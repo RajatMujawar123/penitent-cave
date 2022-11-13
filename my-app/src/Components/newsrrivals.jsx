@@ -4,13 +4,17 @@ import {useEffect,useState,useContext} from "react"
 // import styles from "../user login/signup.module.css"
 import Pagination from "./pagination" 
 import Container from "./container"
-import {Grid,Button,Skeleton,Stack} from "@chakra-ui/react"
+import {Button,Skeleton,Stack,Center,Grid,Divider} from "@chakra-ui/react"
 import { CartContext } from './cartprovider'
 import { addToCart } from './action'
 
 
+
+
+
+
 const fetch=({page,limit,sort,order})=>{
-return axios.get(" http://localhost:4000/clothing?",{
+return axios.get("http://localhost:3000/clothing?",{
     params:{
        _page:page,
        _limit:limit,
@@ -69,23 +73,31 @@ if(loading){
 
   return (
      <>
-     <div  style={{margin:"auto",width:"90%",alignItems:"center",justifyItems:"center"} }>
-     <div style={{border:"solid blue 1px"}}>
-        <div style={{margin:"auto"}}>
-            <img  style={{margin:"auto"}} src="https://www.yoox.com/images/yoox80/banners/6764_1_NuoviArrivi_TOP_K_eu.jpg?634485886869569819" alt="1" />
+     <div  style={{margin:"auto",width:"90%",alignItems:"center",justifyItems:"center",} }>
+     <div style={{border:"solid blue 0px",borderRadius:"8px",marginTop:'80px',height:"300px",boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
+     <div style={{margin:"auto",}}>
+
+<img  style={{margin:"auto"}} src="https://www.yoox.com/images/yoox80/banners/6764_1_NuoviArrivi_TOP_K_eu.jpg?634485886869569819" alt="1" />
+
+</div>
+<h1 style={{textAlign:"center",fontSize:"30px",fontWeight:"600"}}>CLOTHING NEW ARRIVALS</h1> 
+
         </div>
-        <h1 style={{textAlign:"center",fontSize:"30px",fontWeight:"600"}}>CLOTHING NEW ARRIVALS</h1>
-        </div>
-        <div style={{border:"solid blue 1px"}}> 
+
+        <Center>
+    <Divider orientation='horizontal' p={8} width="87%"  color="black"/>
+    </Center>
+
+        {/* <div style={{border:"solid blue 0px",marginTop:'80px'}}> 
         <div style={{textAlign:"left",marginTop:'10px',display:"flex",gap:"10px",}}>
             <Button onClick={()=>setSortinggender("asc")}>Low To High</Button>
             <Button onClick={()=>setSortinggender("desc")}>High To Low</Button>
             <Button onClick={()=>setSorting("Mens")}>Mens</Button>
             <Button onClick={()=>setSorting("Womens")}>Women</Button>
         </div>
-        </div>
+        </div> */}
 
-        <div style={{display:"grid" ,border:"solid teal 0px",marginTop:"20px"}}>
+        <div style={{display:"grid" ,border:"solid teal 0px",marginTop:"50px"}}>
             <div>
             {/* container */}
             <div>
@@ -106,6 +118,7 @@ if(loading){
                             discount={el.discount}
                         />
                         </div>
+                        
                         <Button style={{marginBottom:"20px",background:"rgb(250,173,49)",color:"white"}}
                             disabled={itemAlreadyExists(el.id,state)}
                             onClick={()=>dispatch(addToCart(el))}>Add To Cart</Button>
@@ -125,7 +138,9 @@ if(loading){
      </div>
 </div>
 
-
+<Center>
+    <Divider orientation='horizontal' p={8} width="87%"  color="black"/>
+    </Center>
 
 
      
@@ -138,6 +153,13 @@ export default Newarrivals
 
 
 
+
+{/* */}
+
+
+
 // box-shadow: "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset";
 
 //mr={20} mt={6} align="center" justify="center" templateColumns={{base:"repeat(1,1fr)",md:"repeat(2,1fr)",lg:"repeat(3,1fr)" }} templateRows={{base:"repeat(1,1fr)",md:"repeat(3,1fr)",lg:"repeat(3,1fr)" }} gap={10}
+
+// box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
